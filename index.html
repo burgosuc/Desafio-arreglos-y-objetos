@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;500&family=Roboto:wght@300;500&display=swap"
+      rel="stylesheet"
+    />
+    <title>Desafío 4 "Inmobiliaria"</title>
+    <link rel="icon" type="image/jpg" href="assets/imgs/unnamed.jpg" />
+  </head>
+  <body>
+    <nav>
+      <section>
+        <div>
+          <p>Cantidad de Cuartos:</p>
+          <input
+            min="0"
+            class="form-control w-50 m-auto"
+            type="number"
+            id="cantidadCuarto"
+          />
+        </div>
+        <div>
+          <span>Metros cuadrados ( m² ) </span>
+          <div class="d-flex">
+            <div class="me-4">
+              <p>desde:</p>
+              <input
+                min="0"
+                class="form-control"
+                type="number"
+                id="metrosMin"
+              />
+            </div>
+            <div>
+              <p>hasta:</p>
+              <input
+                min="0"
+                class="form-control"
+                type="number"
+                id="metrosMax"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <button class="btn btn-warning" id="btnBuscar">Buscar</button>
+    </nav>
+    <section id="Propiedades">
+      <h4 class="py-3">Total: <span id="propFiltradas">0</span></h4>
+      <!-- mensaje de aviso en caso de solicitar inmuebles que no cumplen con las características solicitadas por el cliente -->
+      <h3 style="margin-top: 50px">
+        <span id="notFound" hidden
+          >No se encontran inmuebles disponibles con los datos ingresados.<br/>
+          Modifica los valores e intenta nuevamente.</span
+        >
+      </h3>
+      <div class="propiedades"></div>
+    </section>
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>
